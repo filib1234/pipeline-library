@@ -6,14 +6,14 @@ import com.filip.SampleClass
 pipeline {
     agent any
     stages {
-        stage('normal echo') {
+        stage('say hello') {
             steps {
                 echo 'Hello, world'
             }
         }
         stage('echo from sharedLibs') {
             steps {
-                sayHello 'Filip'
+                sayHello ${NAME}
             }
         }
         stage('echo from global var') {
@@ -33,6 +33,11 @@ pipeline {
                    echo 'Incremented age, is now : ' + person.age
                 }
              }
+        }
+        stage('say bye bye') {
+            steps {
+                sayByeBye ${NAME}
+            }
         }
     }
 }
