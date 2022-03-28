@@ -1,9 +1,9 @@
 @Library('pipeline-library') _
-javaWithMaven 'https://github.com/iamvickyav/spring-boot-data-H2-embedded.git'
 
 pipeline {
     agent any
     stages {
+        javaWithMaven 'https://github.com/iamvickyav/spring-boot-data-H2-embedded.git'
         stage('say hello') {
             steps {
                 echo 'Hello, world'
