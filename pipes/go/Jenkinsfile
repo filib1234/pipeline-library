@@ -39,13 +39,5 @@ pipeline {
                 sh 'go test'
             }
         }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying app'
-                sh 'nohup ./gojenkins &'
-            }
-        }
-
     }
 }
