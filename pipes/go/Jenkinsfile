@@ -43,7 +43,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying app'
-                sh './gojenkins'
+                sh 'nohup ./gojenkins &'
             }
         }
 
